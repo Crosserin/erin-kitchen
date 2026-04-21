@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kitchen · Carnet de Recettes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400&display=swap">
+<style>
+  :root { --cream:#faf6e8; --cream-deep:#f0e8d0; --ink:#2a241a; --ink-dim:#6a5c45; --tomato:#c73e1d; --tomato-deep:#8e2a10; --basil:#708c3e; --copper:#b87333; --rule:#d9cba9; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { min-height:100%; }
+  body {
+    background: var(--cream);
+    background-image:
+      radial-gradient(circle at 20% 15%, rgba(199,62,29,0.05) 0, transparent 30%),
+      radial-gradient(circle at 80% 85%, rgba(112,140,62,0.06) 0, transparent 30%);
+    color: var(--ink); font-family:'Inter',sans-serif;
+    display:flex; flex-direction:column; min-height:100vh; -webkit-font-smoothing:antialiased;
+  }
+  body::before { content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+    background: repeating-linear-gradient(90deg, transparent 0 29px, rgba(216,190,150,0.2) 29px 30px); opacity:0.4; }
+  nav { padding:22px 40px; display:flex; justify-content:space-between; align-items:baseline; position:relative; z-index:2; border-bottom:2px solid var(--tomato); }
+  nav .brand { font-family:'Caveat',cursive; font-weight:700; font-size:26px; color:var(--tomato); letter-spacing:0.01em; }
+  nav .meta { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:13px; color:var(--basil); }
+  main { flex:1; max-width:720px; width:100%; margin:0 auto; padding:60px 40px 40px; position:relative; z-index:2; }
+  .recipe-num { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:16px; color:var(--ink-dim); margin-bottom:24px; letter-spacing:0.05em; }
+  h1 {
+    font-family:'Caveat',cursive; font-weight:700; font-size:clamp(72px,11vw,136px); line-height:0.95;
+    color:var(--tomato); margin-bottom:10px; letter-spacing:0;
+    transform: rotate(-1.5deg); transform-origin: left center;
+  }
+  h1 small { display:block; font-family:'Caveat',cursive; font-size:0.4em; font-weight:500; color:var(--basil); margin-top:10px; transform: rotate(0.5deg); }
+  .subtitle-en { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:18px; color:var(--ink-dim); margin:26px 0 40px; letter-spacing:0.02em; }
+  .body-text { font-family:'Cormorant Garamond',serif; font-size:19px; line-height:1.75; color:var(--ink); max-width:560px; margin-bottom:20px; }
+  .body-text em { font-style:italic; color:var(--tomato); font-weight:500; }
+  .copper-pot { margin:36px 0 24px; display:flex; align-items:center; gap:14px; font-family:'Caveat',cursive; font-size:22px; color:var(--copper); font-weight:500; }
+  .copper-pot::before { content:''; display:inline-block; width:44px; height:24px; border:2px solid var(--copper); border-top:none; border-radius:0 0 12px 12px; position:relative; }
+  .copper-pot::after { content:''; flex:1; height:1px; background:var(--rule); }
+  .ingredients-card {
+    background: rgba(255,255,255,0.5); border:1px solid var(--rule); border-left:5px solid var(--basil);
+    padding:20px 26px; font-family:'Cormorant Garamond',serif; line-height:2; font-size:15px; color:var(--ink-dim);
+    border-radius:2px;
+  }
+  .ingredients-card b { color:var(--ink); font-weight:500; font-style:normal; }
+  .ingredients-card .label { font-family:'Caveat',cursive; font-size:20px; color:var(--tomato); display:block; margin-bottom:6px; }
+  footer { padding:20px 40px; display:flex; justify-content:space-between; align-items:center; position:relative; z-index:2;
+    font-family:'Cormorant Garamond',serif; font-style:italic; font-size:13px; color:var(--ink-dim); border-top:1px solid var(--rule); }
+  footer a { color:var(--tomato); text-decoration:none; }
+  footer a:hover { color:var(--tomato-deep); }
+  @media (max-width:640px) { nav,footer { padding:14px 20px; } main { padding:40px 22px; } nav .meta { display:none; } }
+</style>
+</head>
+<body>
+  <nav><span class="brand">Carnet de Recettes</span><span class="meta">&mdash; la cuisine d'Erin &mdash;</span></nav>
+  <main>
+    <div class="recipe-num">Livre premier · entrée n° 001</div>
+    <h1>The Kitchen.<small>— la bonne table —</small></h1>
+    <p class="subtitle-en">Recipes worth keeping, scaled for the household that needs them.</p>
+    <p class="body-text">Some recipes live in a browser tab, forgotten. This one holds them on paper, in a single place, with proper servings that <em>scale</em>, shopping lists that generate themselves, and room for the notes that make the thing actually yours.</p>
+    <p class="body-text">Mise en place underway. First cards laminating.</p>
+    <div class="copper-pot">simmering</div>
+    <div class="ingredients-card">
+      <span class="label">mise en place</span>
+      Storage: <b>github.com/Crosserin/erin-kitchen-data</b><br>
+      Format: <b>one markdown card per recipe</b><br>
+      Access: <b>cuisinier privé</b>
+    </div>
+  </main>
+  <footer>
+    <span>Erin Cross · X = Consulting</span>
+    <a href="https://cf-examples.pages.dev">← back to portfolio</a>
+  </footer>
+</body>
+</html>
