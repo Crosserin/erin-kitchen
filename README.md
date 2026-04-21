@@ -1,21 +1,29 @@
 # erin-kitchen
 
-> **Kitchen** — themed personal tool · *Ratatouille*
+> **Kitchen** — Carnet de Recettes
+>
+> *"Anyone can cook. Not everyone can remember a recipe six months later. That's what this is for."*
 
-Live: **https://erin-kitchen.pages.dev**
+**🍷 Live kitchen → [erin-kitchen.pages.dev](https://erin-kitchen.pages.dev)**
 
-Part of Erin Cross's personal tool suite. Each tool wears a different cinematic theme.
+---
 
-- **UI repo** (this, public): the page + Pages Functions
-- **Data repo** (`erin-kitchen-data`, private): the actual kitchen data
+Recipes worth keeping, in a place that respects them. One markdown card per recipe. Servings that scale with a slider — I have kids on alternating weekends, so "serves 4" means "serves 2 or 4 depending on which Saturday it is." Shopping lists that generate themselves.
 
-## Stack
+No ads. No food blogger origin story. No "jump to recipe" button because there is nothing to jump past.
 
-- Cloudflare Pages (static + Pages Functions)
-- Data proxied from a private GitHub repo via narrowly-scoped PAT
-- GitHub Actions auto-deploys every push to `main`
+## Mise en place
 
-## Related
+- **La cuisine** (this, public): the recipe reader
+- **Le garde-manger** (private, [`erin-kitchen-data`](https://github.com/Crosserin/erin-kitchen-data)): each recipe as a markdown card
+- **Stack**: Cloudflare Pages + GitHub Contents API
+- **Format**: markdown with YAML frontmatter — `title`, `servings`, `time`, `tags`, ingredients, steps
+
+## Clearance
+
+Ma cuisine, mes règles.
+
+## Autre
 
 - 🌐 [xconsultingwork.com](https://xconsultingwork.com)
-- 🎨 [cf-examples portfolio](https://cf-examples.pages.dev)
+- 🧪 [cf-examples](https://cf-examples.pages.dev)
